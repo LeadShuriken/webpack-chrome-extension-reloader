@@ -147,12 +147,12 @@ yarn build
 
  And then run:  
  ```
- yarn sample
+ yarn click_bait_filter_extension
  ```
  
- This will make the webpack run in watch mode for the sample plugin source and output the built files on the "dist"
+ This will make the webpack run in watch mode for the click_bait_filter_extension plugin source and output the built files on the "dist"
  directory.
- Load the extension **(the files in "sample/dist" directory)** in Chrome using the "load unpacked extension", open a 
+ Load the extension **(the files in "click_bait_filter_extension/dist" directory)** in Chrome using the "load unpacked extension", open a 
  new tab in any site and open the developer panel on it. Watch the dev. tools console tab, and do some changes on 
  the background or content script. Voila!
 
