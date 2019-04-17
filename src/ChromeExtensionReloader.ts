@@ -15,7 +15,8 @@ import {
   EntriesOption
 } from "webpack-chrome-extension-reloader";
 
-export default class ChromeExtensionReloaderImpl extends AbstractChromePluginReloader
+export default class ChromeExtensionReloaderImpl
+  extends AbstractChromePluginReloader
   implements ChromeExtensionReloaderInstance {
   private _opts?: PluginOptions;
   constructor(options?: PluginOptions) {
