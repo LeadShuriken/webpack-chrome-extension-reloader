@@ -7,11 +7,37 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Launch Program",
-            "args": ["--config", "./webpack.config.js","--mode=development", "--watch"],
-            "env": {"NODE_ENV": "development"},
+            "name": "LAUNCH BACKEND",
+            "env": {
+                "PORT": "3001"
+            },
+            "program": "${workspaceFolder}/click_bait_filter_be/index.js",
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "LAUNCH FRONTEND",
+            "args": [
+                "--config",
+                "./webpack.config.js",
+                "--mode=development",
+                "--watch"
+            ],
+            "env": {
+                "NODE_ENV": "development"
+            },
             "program": "${workspaceFolder}/node_modules/webpack/bin/webpack.js",
             "console": "integratedTerminal"
-          }
+        }
+    ],
+    "compounds": [
+        {
+            "name": "LAUNCH SERVER/CLIENT",
+            "configurations": [
+                "LAUNCH BACKEND",
+                "LAUNCH FRONTEND"
+            ]
+        }
     ]
 }
