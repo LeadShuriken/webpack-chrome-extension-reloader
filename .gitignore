@@ -2,7 +2,6 @@ click_bait_filter_be
 click_bait_filter_extension
  
 .idea/
-.vscode/
 .bin/
 .tmp/
 .DS_STORE
