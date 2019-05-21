@@ -5,7 +5,9 @@ click_bait_filter_extension
 .bin/
 .tmp/
 .DS_STORE
-dist/
+
+dist/**
+!dist/tests.js
 
 # Logs
 logs
