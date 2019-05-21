@@ -19,11 +19,11 @@
     }
   },
   "scripts": {
-    "build": "SET NODE_ENV=production&& webpack",
-    "test": "SET NODE_ENV=test&& webpack && mocha dist/tests.js",
-    "watch": "SET NODE_ENV=development&& webpack --watch",
-    "analyze": "SET NODE_ENV=production&& webpack --env.analyze",
-    "extension": "SET NODE_ENV=development&& webpack --config click_bait_filter_extension/webpack.plugin.js --watch",
+    "build": "set NODE_ENV=production&& webpack",
+    "test": "set NODE_ENV=test&& webpack && mocha dist/tests.js",
+    "watch": "set NODE_ENV=development&& webpack --watch",
+    "analyze": "set NODE_ENV=production&& webpack --env.analyze",
+    "extension": "set NODE_ENV=development&& webpack --config click_bait_filter_extension/webpack.plugin.js --watch",
     "prepublish": "yarn build",
     "format": "prettier --write \"{src,client}/**/*.ts\""
   },
@@ -41,6 +41,7 @@
     "hot-reload"
   ],
   "dependencies": {
+    "@types/node": "^12.0.2",
     "colors": "^1.1.2",
     "lodash": "^4.17.4",
     "minimist": "^1.2.0",

@@ -1,7 +1,7 @@
 import * as webpack from "webpack";
 import { Configuration } from "webpack";
 import ChromeExtensionReloaderImpl from "../src/ChromeExtensionReloader";
-import { error } from "util";
+// import { error } from "util";
 import { info } from "../src/utils/logger";
 import { PluginOptions } from "webpack-chrome-extension-reloader";
 
@@ -19,10 +19,10 @@ export default class ExtensionCompiler {
   }
 
   private static treatErrors(err) {
-    error(err.stack || err);
-    if (err.details) {
-      error(err.details);
-    }
+    // error(err.stack || err);
+    // if (err.details) {
+    //   error(err.details);
+    // }
   }
 
   watch() {
