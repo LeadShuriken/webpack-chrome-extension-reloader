@@ -20,7 +20,7 @@
             "name": "LAUNCH FRONTEND",
             "args": [
                 "--config",
-                "./webpack.config.js",
+                "./click_bait_filter_extension/webpack.plugin.js",
                 "--mode=development",
                 "--watch"
             ],
