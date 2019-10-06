@@ -7,12 +7,29 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "LAUNCH BACKEND",
+            "name": "LAUNCH BACKEND:STATIC",
             "env": {
-                "PORT": "3001"
+                "SERVETYPE": "STATIC",
+                "API_URL": "/api",
+                "PORT": "4000"
             },
             "program": "${workspaceFolder}/click_bait_filter_be/index.js",
-            "console": "integratedTerminal"
+            "restart": true,
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "LAUNCH BACKEND:DEV",
+            "env": {
+                "API_URL": "/api",
+                "PORT": "4000"
+            },
+            "program": "${workspaceFolder}/click_bait_filter_be/index.js",
+            "restart": true,
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen"
         },
         {
             "type": "node",
@@ -35,7 +52,7 @@
         {
             "name": "LAUNCH SERVER/CLIENT",
             "configurations": [
-                "LAUNCH BACKEND",
+                "LAUNCH BACKEND:DEV",
                 "LAUNCH FRONTEND"
             ]
         }
