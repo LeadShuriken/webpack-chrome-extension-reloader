@@ -7,20 +7,6 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "LAUNCH BACKEND:STATIC",
-            "env": {
-                "SERVETYPE": "STATIC",
-                "API_URL": "/api",
-                "PORT": "4000"
-            },
-            "program": "${workspaceFolder}/click_bait_filter_be/index.js",
-            "restart": true,
-            "console": "integratedTerminal",
-            "internalConsoleOptions": "neverOpen"
-        },
-        {
-            "type": "node",
-            "request": "launch",
             "name": "LAUNCH BACKEND:DEV",
             "env": {
                 "API_URL": "/api",
