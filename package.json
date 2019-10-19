@@ -19,11 +19,11 @@
     }
   },
   "scripts": {
-    "build": "set NODE_ENV=production&& webpack",
-    "test": "set NODE_ENV=test&& webpack && mocha dist/tests.js",
-    "watch": "set NODE_ENV=development&& webpack --watch",
-    "analyze": "set NODE_ENV=production&& webpack --env.analyze",
-    "extension": "set NODE_ENV=development&& webpack --config click_bait_filter_extension/webpack.plugin.js --watch",
+    "build": "export NODE_ENV=production&& webpack",
+    "test": "export NODE_ENV=test&& webpack && mocha dist/tests.js",
+    "watch": "export NODE_ENV=development&& webpack --watch",
+    "analyze": "export NODE_ENV=production&& webpack --env.analyze",
+    "extension": "export NODE_ENV=production&& webpack --config click_bait_filter_extension/webpack.plugin.js",
     "prepublish": "yarn build",
     "format": "prettier --write \"{src,client}/**/*.ts\""
   },
@@ -79,6 +79,7 @@
     "memory-fs": "^0.4.1",
     "mini-css-extract-plugin": "^0.5.0",
     "mocha": "^6.1.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
     "prettier": "^1.8.2",
     "raw-loader": "^2.0.0",
     "sinon": "^7.1.1",
