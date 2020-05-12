@@ -10,6 +10,7 @@
             "name": "LAUNCH BACKEND:DEV",
             "env": {
                 "API_URL": "/api",
+                "MONGODB_URI": "mongodb://127.0.0.1/my_database",
                 "PORT": "4000"
             },
             "program": "${workspaceFolder}/click_bait_filter_be/index.js",
