@@ -5,12 +5,21 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "LAUNCH MODEL:GEN",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/click_bait_filter_ml/src/main.py",
+            "justMyCode": false,
+            "cwd": "${workspaceFolder}/click_bait_filter_ml/src",
+            "django": true
+        },
+        {
             "type": "node",
             "request": "launch",
             "name": "LAUNCH BACKEND:DEV",
             "env": {
                 "API_URL": "/api",
-                "MONGODB_URI": "mongodb://127.0.0.1/my_database",
+                "MONGODB_URI": "mongodb://127.0.0.1/temp",
                 "PORT": "4000"
             },
             "program": "${workspaceFolder}/click_bait_filter_be/index.js",
@@ -21,7 +30,7 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "LAUNCH FRONTEND",
+            "name": "LAUNCH FRONTEND:DEV",
             "args": [
                 "--config",
                 "./click_bait_filter_extension/webpack.plugin.js",
@@ -30,6 +39,7 @@
             ],
             "env": {
                 "NODE_ENV": "development"
+                // "URL": 'https://clickbait-filtering-plugin-api.herokuapp.com'
             },
             "program": "${workspaceFolder}/node_modules/webpack/bin/webpack.js",
             "console": "integratedTerminal"
@@ -40,7 +50,7 @@
             "name": "LAUNCH SERVER/CLIENT",
             "configurations": [
                 "LAUNCH BACKEND:DEV",
-                "LAUNCH FRONTEND"
+                "LAUNCH FRONTEND:DEV"
             ]
         }
     ]
