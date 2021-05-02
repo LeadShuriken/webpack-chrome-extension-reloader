@@ -4,7 +4,7 @@
 /*  This will be converted into a lodash templ., any  */
 /*  external argument must be provided using it       */
 /* -------------------------------------------------- */
-(function(chrome, window) {
+(function (chrome, window) {
   const signals: any = JSON.parse('<%= signals %>');
   const config: any = JSON.parse('<%= config %>');
 
@@ -66,8 +66,7 @@
             JSON.stringify({
               type: SIGN_RELOADED,
               payload: formatter(
-                `${timeFormatter(new Date())} - ${
-                  manifest.name
+                `${timeFormatter(new Date())} - ${manifest.name
                 } successfully reloaded`
               )
             })
@@ -81,8 +80,7 @@
 
     socket.addEventListener("close", ({ code }: CloseEvent) => {
       logger(
-        `Socket connection closed. Code ${code}. See more in ${
-          SOCKET_ERR_CODE_REF
+        `Socket connection closed. Code ${code}. See more in ${SOCKET_ERR_CODE_REF
         }`,
         "warn"
       );
@@ -100,7 +98,7 @@
   }
 
   // ======================= Bootstraps the middleware =========================== //
-  runtime.reload
+  runtime.reload !== undefined && runtime.reload !== null
     ? backgroundWorker(new WebSocket(wsHost))
     : contentScriptWorker();
 })(chrome, window);

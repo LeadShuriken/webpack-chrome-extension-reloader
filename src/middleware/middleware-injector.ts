@@ -7,7 +7,7 @@ export default function middlewareInjector(
   { port, reloadPage }: MiddlewareTemplateParams
 ) {
   const source = middleWareSourceBuilder({ port, reloadPage });
-  const sourceFactory: SourceFactory = (...sources): Source =>
+  const sourceFactory: SourceFactory = (...sources): any =>
     new ConcatSource(...sources);
 
   return (assets: object, chunks: WebpackChunk[]) =>

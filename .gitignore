@@ -1,7 +1,10 @@
 click_bait_filter_be
 click_bait_filter_extension
 click_bait_filter_portal
-click_bait_filter_ml
+click_bait_filter_tflow
+click_bait_filter_nlp
+click_bait_filter_j
+
 db/**
 
 .vscode/
